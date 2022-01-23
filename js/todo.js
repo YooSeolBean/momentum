@@ -50,13 +50,16 @@ function todoContents(event){
 const callLocalStorage = localStorage.getItem(TODO_LIST);
 todoForm.addEventListener("submit",todoContents);
 
+function sayHello(item){
+
+}
+
 const savedTodos = localStorage.getItem(TODOS_KEY);
 
-console.log(savedTodos);
 
 if(savedTodos !== null){
   const parsedToDos = JSON.parse(savedTodos);
-  console.log(parsedToDos);
+ 
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
